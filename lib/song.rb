@@ -14,6 +14,7 @@ class Song
       song_i.artist=Artist.find_or_create_by_name(artist_name) #finds / creates artist instance AND adds artist instance to song instance
       song_i.artist.add_song(song_i) #adds song instance to artist instance
       song_i
+      binding.pry
     end
 
 
