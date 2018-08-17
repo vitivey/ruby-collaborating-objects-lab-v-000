@@ -33,7 +33,7 @@ class Artist
         else
           instance=Artist.new(name)
         end
-        # binding.pry
+        binding.pry
       end
 
       def print_songs
