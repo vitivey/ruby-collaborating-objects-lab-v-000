@@ -7,7 +7,6 @@ class Artist
       def initialize(name)
         @name=name
         @songs=[]
-        save
       end
 
       def songs
@@ -31,6 +30,8 @@ class Artist
         search = self.all.select {|instance| instance.name == name}
         if search.nil?  #if there is no artist instance
           instance = Artist.new(name)
+          instance.save
+          instance
         else
           instance = search.first
         end
