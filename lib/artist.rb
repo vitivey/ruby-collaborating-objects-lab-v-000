@@ -30,7 +30,7 @@ class Artist
         if search.nil?  #if there is no artist instance
           instance = Artist.new(name)
           instance.save
-          # instance
+          instance
         else
           instance = search.first
         end
