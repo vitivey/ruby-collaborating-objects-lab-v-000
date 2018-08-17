@@ -33,7 +33,7 @@ class Artist
         else
           instance = search.first
         end
-        binding.pry
+        # binding.pry
       end
 
       def print_songs
