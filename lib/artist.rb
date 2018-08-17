@@ -34,6 +34,7 @@ class Artist
           instance.save
           instance
         end
+        binding.pry
       end
 
       def print_songs
