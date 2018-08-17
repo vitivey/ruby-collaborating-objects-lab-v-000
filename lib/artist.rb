@@ -29,7 +29,7 @@ class Artist
       def self.find_or_create_by_name(name) #name is artist string
         search = self.all.select {|instance| instance.name == name}
         if search.nil?  #if there is no artist instance
-          instance=Artist.new(name)
+          instance = Artist.new(name)
         else
           instance = search.first
         end
