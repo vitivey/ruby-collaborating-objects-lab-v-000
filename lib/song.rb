@@ -13,7 +13,7 @@ class Song
       song_i
     end
 
-    def artist_name=(artist_string)
+    def artist_name=(file.split("-")[0].strip)
       self.artist=Artist.find_or_create_by_name(artist_string) #finds / creates artist instance AND adds artist instance to song instance
       binding.pry
 
