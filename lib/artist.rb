@@ -29,9 +29,9 @@ class Artist
         search = self.all.select {|instance| instance.name == name}
         if search.nil?
           instance = search.first
-          instance.save
         else
           instance=Artist.new(name)
+          instance.save
         end
         binding.pry
       end
