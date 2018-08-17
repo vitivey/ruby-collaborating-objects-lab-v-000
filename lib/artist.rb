@@ -25,13 +25,13 @@ class Artist
         @@all
       end
 
-      def self.find_or_create_by_name(name)
+      def self.find_or_create_by_name(name) #name is artist string
         search = self.all.select {|instance| instance.name == name}
-        if search.nil?
-          instance = search.first
-        else
+        if search.nil?  #if there is no artist instance
           instance=Artist.new(name)
           instance.save
+        else
+          instance = search.first
         end
         binding.pry
       end
